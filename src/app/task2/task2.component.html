@@ -1,0 +1,15 @@
+<div>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" [(ngModel)]="inputString" />
+    <button (click)="findBalancedSubstrings()">Find Balanced Substrings</button>
+  </div>
+  
+  <div *ngIf="result.length > 0">
+    <p>Longest balanced substrings:</p>
+    <ul>
+      <li *ngFor="let substring of result">{{ substring }}</li>
+    </ul>
+  </div>
+  <div *ngIf="result.length === 0">
+    <p>No balanced substrings found.</p>
+  </div>

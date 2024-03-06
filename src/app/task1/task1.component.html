@@ -1,0 +1,8 @@
+<div>
+    <label>Enter Fibonacci Position: </label>
+    <input type="number" [(ngModel)]="position" />
+    <button (click)="calculate()">Calculate</button>
+    <p *ngIf="fibonacciValue !== undefined">
+      Fibonacci Value at Position {{ position }}: {{ fibonacciValue }}
+    </p>
+  </div>
